@@ -1,0 +1,187 @@
+.hero{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+
+    height: 100%;
+    padding: 5%;
+
+}
+
+.hero-left-part{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+
+    text-align: center;
+
+    color: white;
+
+    h1{
+        font-size: 1.7rem;
+        font-weight: 700;
+        width: 80%;
+    }
+}
+
+.hero-right-part{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.try-it-free{
+    font-weight: 600;
+    color: white;
+    text-align: center;
+    border-radius: 0.7rem;
+    background-color: $Blue;
+    width: 100%;
+
+    padding: 1rem 3.5rem;
+
+    box-shadow: 0 7px 0 rgba(0, 0, 0, 0.25) ;
+
+    span{
+        font-size: 0.9rem;
+        font-weight: 400;
+    }
+}
+
+.form-container{
+    width: 100%;
+    background-color: white;
+    border-radius: 0.7rem;
+    box-shadow: 0 7px 0 rgba(0, 0, 0, 0.25) ;
+    padding: 1.3rem;
+
+    .term-and-services{
+        text-align: center;
+        font-size: 0.8rem;
+        color: $Grayish-Blue;
+
+        padding: 0 5%;
+
+        margin-top: 1rem;
+
+        a{
+            text-decoration: none;
+            color: $Red;
+            font-weight: 700;
+        }
+    }
+}
+
+.hero-form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    .input-container{
+        display: flex;
+        align-items: center;
+        position: relative;
+        width: 100%;
+
+        input{
+            width: 100%;
+            padding: 1rem;
+            border: 1px solid hsl(240, 3%, 83%);
+            border-radius: 0.3rem;
+
+            &::placeholder{
+                font-family: 'Poppins', sans-serif;
+                font-weight: 600;
+                color: $Dark-Blue;
+                opacity: 0.9;
+            }
+        }
+
+        .error-input-border{
+            border: 1px solid red;
+        }
+        .valid-input-border{
+            border: 1px solid $Green;
+        }
+
+        .error-icon{
+            display: flex;
+            align-items: center;
+            position: absolute;
+            right: 1rem;
+
+            img{
+                width: 1rem;
+            }
+        }
+    }
+
+
+    .text-error{
+        font-size: 0.6rem;
+        font-weight: 500;
+        font-style: italic;
+        color: red;
+        width: 100%;
+        text-align: right;
+
+        margin: 0.2rem 0 1rem 0;
+
+    }
+
+    button{
+        border: none;
+        border-radius: 0.3rem;
+        background-color: $Green;
+        color: white;
+        font-size: 1.3rem;
+        font-weight: 500;
+        width: 100%;
+        padding: 1rem;
+
+        box-shadow: 0 5px 0 hsl(154, 57%, 45%) ;
+
+        &:hover{
+            cursor: pointer;
+            filter: brightness(1.1);
+        }
+    }
+
+    .hidden{
+        visibility: hidden;
+    }
+
+}
+
+
+
+
+
+
+@media only screen and (min-width : 768px) {
+    .hero{
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 0rem;
+    
+    }
+
+    .hero-left-part{
+        align-items: flex-start;
+        text-align: left;
+
+        width: 50%;
+    
+        h1{
+            font-size: 3rem;
+            width: 70%;
+        }
+
+        p{
+            max-width: 80%;
+        }
+    }
+}
